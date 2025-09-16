@@ -1,4 +1,23 @@
 body{
     background-color: #121212;
     color: white;
+
+a{
+    text-decoration: none;
+    color: white;
 }
+.cabecera-de-navegacion {
+    color: #ffffff;
+    height: 250px;
+    background-color: #ffb13d;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+.contenido{
+    padding: 20px;
+    text-align: center;
+}
+}
+/*colores #ffb13d*/

@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="<?=base_url('styles/style.css')?>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Zenith</title>
 </head>
 
 <body>
     <header>
-        <br>
-        <nav>
-
-            <nav class="nav">
-                <img src="<?=base_url('images/shime37.png')?>" alt="Logo" class="d-inline-block align-text-top">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
-                <a class="nav-link" href="#">Link</a>
-                <a class="nav-link" href="#">Link</a>
+            <nav class="cabecera-de-navegacion">
+                <p class="sisisi">Zenith</p>
             </nav>
-        </nav>
     </header>
+    <div class="contenido">
+        <h1>Welcome to Zenith</h1>
+        <p>Your gateway to excellence.</p>
     <hr>
 </body>
 
