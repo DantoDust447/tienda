@@ -46,43 +46,16 @@
         </div>
     </header>
     <main>
-        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="<?=base_url('images/prueba.jpg')?>" class="d-block w-100" alt="..."
-                        style="width: 200px; height: 600px; object-fit: cover; position: center;">
-                </div>
-                <div class="carousel-item">
-                    <img src="<?=base_url('images/prueba0000.png')?>" class="d-block w-100" alt="..."
-                        style="width: 200px; height: 600px; object-fit: cover; position: center;">
-                </div>
-                <div class="carousel-item">
-                    <img src="<?=base_url('images/prueba0001.jpg')?>" class="d-block w-100" alt="..."
-                        style="width: 200px; height: 600px; object-fit: cover; position: center;">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        <div class="container text-center">
+            <form action="" class="container mt-5 text-center">
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputPassword6" class="col-form-label">Password</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="password" id="inputPassword6" class="form-control"
+                            aria-describedby="passwordHelpInline">
+                    </div>
+            </form>
         </div>
-        <hr>
-
     </main>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>

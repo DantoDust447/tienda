@@ -7,6 +7,9 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
+/*Procesos de Login*/
+$routes->get('login', 'LoginController::index');
+
 /*estado*/
 $routes->get('estados', 'EstadoController::index');
 $routes->post('agregar_estado', 'EstadoController::agregar');
