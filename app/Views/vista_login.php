@@ -46,16 +46,20 @@
         </div>
     </header>
     <main>
-        <div class="container text-center">
-            <form action="" class="container mt-5 text-center">
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="inputPassword6" class="col-form-label">Password</label>
-                    </div>
-                    <div class="col-auto">
-                        <input type="password" id="inputPassword6" class="form-control"
-                            aria-describedby="passwordHelpInline">
-                    </div>
+        <div class="container center">
+            <form action="" class="container position-absolute top-50 start-50 translate-middle">
+                <label for="inputPassword5" class="form-label">Password</label>
+                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                <div id="passwordHelpBlock" class="form-text">
+                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain
+                    spaces, special characters, or emoji.
+                </div>
+                <label for="inputPassword5" class="form-label">Password</label>
+                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                <div id="passwordHelpBlock" class="form-text">
+                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain
+                    spaces, special characters, or emoji.
+                </div>
             </form>
         </div>
     </main>
