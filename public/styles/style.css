@@ -51,6 +51,7 @@ nav{
     margin-right: 20px;
 }
 .social-network-bar{
+    color: #ffffff !important;
     background-color: #ad0000;
     height: 40px;
     display: flex;

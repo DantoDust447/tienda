@@ -8,8 +8,5 @@ class Home extends BaseController
     {
         return view('index');
     }
-    public function categorias(): string 
-    {
-        return view('categorias');
-    }
+   
 }

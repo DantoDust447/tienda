@@ -47,8 +47,27 @@
     </header>
     <main>
         <hr>
-
-    </main>
+        <h2 class="text-center">Categorias</h2>
+        <div class="container">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <?php foreach ($datos as $categoria){
+                ?>
+                        <th scope="col" class="text-center"><?=$categoria['categoria'];?></th>
+                        <?php
+        }
+         ?>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

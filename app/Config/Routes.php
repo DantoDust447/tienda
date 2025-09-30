@@ -6,7 +6,6 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('categorias', 'Home::categorias');
 
 /*estado*/
 $routes->get('estados', 'EstadoController::index');
@@ -72,7 +71,7 @@ $routes->get('buscar_marca', 'MarcaController::buscar');
 $routes->post('modificar_marca', 'MarcaController::modificar');
 
 /*categorias*/
-$routes->get('categorias', 'CategoriaController::index');
+$routes->get('categorias', 'CategoriasController::index');
 $routes->post('agregar_categoria', 'CategoriaController::agregar');
 $routes->get('eliminar_categoria', 'CategoriaController::eliminar');
 $routes->get('buscar_categoria', 'CategoriaController::buscar');
