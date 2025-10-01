@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
-
+<!--Esta parte del proyecto fue creada por Dante Sánchez-->
+<!--El motivo de esto es concientizar al resto del grupo a ser mas colaborativo-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,9 +31,9 @@
                 <button type="button" class="btn btn-outline-primary">
                     <i class="bi bi-basket3-fill"></i>
                 </button>
-                <button type="button" class="btn btn-outline-primary">
+                <a type="button" class="btn btn-outline-primary" href="<?=base_url('login')?>">
                     <i class="bi bi-person-fill"></i></i>
-                </button>
+                </a>
             </div>
         </nav>
         <div class="social-network-bar">
@@ -47,16 +48,18 @@
     </header>
     <main>
         <hr>
-        <h2 class="text-center">Categorias</h2>
+        <h1 class="text-center">Categorias</h1>
         <div class="container">
             <?php foreach ($categorias as $categoria){
                 ?>
             <table class="table table-striped table-hover">
                 <thead>
-                    <tr>
-                        
-                        <th scope="col" class="text-center"><?=$categoria['categoria'];?></th>
-                        
+                    <tr>    
+                        <th scope="col" class="text-center">
+                            <h2>
+                                <?=$categoria['categoria'];?>
+                            </h2>
+                        </th>
                     </tr>
 
                 </thead>
@@ -66,6 +69,8 @@
                     <tr>
                         <?php if ($producto['categoria_id'] == $categoria['categoria_id']): ?>
                         <td><?= esc($producto['nombre'])?></td>
+                        <td><?= esc($producto['descripcion'])?></td>
+                        <td><a href="<?=base_url('buscar_producto')?>" class="btn btn-outline-light">Mas información</a></td>
                         <?php endif; ?>
                     </tr>
                     <?php

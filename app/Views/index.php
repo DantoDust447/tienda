@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
-
+<!--Esta parte del proyecto fue creada por Dante Sánchez-->
+<!--El motivo de esto es concientizar al resto del grupo a ser mas colaborativo-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

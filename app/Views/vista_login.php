@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
-
+<!--Esta parte del proyecto fue creada por Dante Sánchez-->
+<!--El motivo de esto es concientizar al resto del grupo a ser mas colaborativo-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,20 +47,19 @@
         </div>
     </header>
     <main>
-        <div class="container center">
-            <form action="" class="container position-absolute top-50 start-50 translate-middle">
-                <label for="inputPassword5" class="form-label">Password</label>
-                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-                <div id="passwordHelpBlock" class="form-text">
-                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain
-                    spaces, special characters, or emoji.
-                </div>
-                <label for="inputPassword5" class="form-label">Password</label>
-                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-                <div id="passwordHelpBlock" class="form-text">
-                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain
-                    spaces, special characters, or emoji.
-                </div>
-            </form>
+        <div class="container">
+            <div class="container">
+                <form action="" class="container position-absolute top-50 start-50 translate-middle">
+                    <label for="inputPassword5" class="form-label">Usuario</label>
+                    <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                    <div id="passwordHelpBlock" class="form-text">
+                    </div>
+                    <label for="inputPassword5" class="form-label">Contraseña</label>
+                    <input type="password" id="inputPassword5" class="form-control"
+                        aria-describedby="passwordHelpBlock">
+                    <div id="passwordHelpBlock" class="form-text">
+
+                </form>
+            </div>
         </div>
     </main>
