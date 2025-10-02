@@ -2,6 +2,7 @@
 <html lang="es" data-bs-theme="dark">
 <!--Esta parte del proyecto fue creada por Dante Sánchez-->
 <!--El motivo de esto es concientizar al resto del grupo a ser mas colaborativo-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Prime Suplements</title>
 </head>
+
 
 <body>
     <header>
@@ -26,15 +28,15 @@
             <<form method="get" action="<?= base_url('buscar_producto') ?>" class="search-bar">
                 <input type="text" class="form-control" placeholder="Buscar">
                 <i class="bi bi-search"></i>
-            </form>
-            <div class="btn-group" role="group" aria-label="Default button group">
-                <a type="button" class="btn btn-outline-primary">
-                    <i class="bi bi-basket3-fill"></i>
-                </a>
-                <a type="button" class="btn btn-outline-primary" href="<?=base_url('login')?>">
-                    <i class="bi bi-person-fill"></i></i>
-                </a>
-            </div>
+                </form>
+                <div class="btn-group" role="group" aria-label="Default button group">
+                    <a type="button" class="btn btn-outline-primary">
+                        <i class="bi bi-basket3-fill"></i>
+                    </a>
+                    <a type="button" class="btn btn-outline-primary" href="<?=base_url('login')?>">
+                        <i class="bi bi-person-fill"></i></i>
+                    </a>
+                </div>
         </nav>
         <div class="social-network-bar">
             Siguenos en nuestras redes sociales y forma parte de nuestra comunidad
@@ -44,22 +46,25 @@
                 <i class="bi bi-twitter-x"></i>
             </div>
 
+
         </div>
     </header>
     <main>
+        <hr>
+        <h1 class="text-center">Producto</h1>
+        
         <div class="container">
-            <div class="container">
-                <form action="" class="container position-absolute top-50 start-50 translate-middle">
-                    <label for="inputPassword5" class="form-label">Usuario</label>
-                    <input type="text" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-                    <div id="passwordHelpBlock" class="form-text">
-                    </div>
-                    <label for="inputPassword5" class="form-label">Contraseña</label>
-                    <input type="password" id="inputPassword5" class="form-control"
-                        aria-describedby="passwordHelpBlock">
-                    <div id="passwordHelpBlock" class="form-text">
-
-                </form>
-            </div>
+            <?php if(isset($datos)): ?>
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><?= esc($datos['nombre'])?></h5>
+                    <p class="card-text"><?= esc($datos['descripcion'])?></p>
+                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                </div>
+            <?php endif; ?>
         </div>
     </main>
+</body>
+
+</html>

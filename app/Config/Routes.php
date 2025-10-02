@@ -75,10 +75,10 @@ $routes->post('modificar_marca', 'MarcaController::modificar');
 
 /*categorias*/
 $routes->get('categorias', 'CategoriasController::index');
-$routes->post('agregar_categoria', 'CategoriaController::agregar');
-$routes->get('eliminar_categoria', 'CategoriaController::eliminar');
-$routes->get('buscar_categoria', 'CategoriaController::buscar');
-$routes->post('modificar_categoria', 'CategoriaController::modificar');
+$routes->post('agregar_categoria', 'CategoriasController::agregar');
+$routes->get('eliminar_categoria', 'CategoriasController::eliminar');
+$routes->get('buscar_categoria/(:num)', 'CategoriasController::buscar/$1');
+$routes->post('modificar_categoria', 'CategoriasController::modificar');
 
 /*roles*/
 $routes->get('roles', 'RolController::index');

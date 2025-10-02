@@ -23,10 +23,11 @@
                 <a href="<?=base_url('productos')?>" class="header-links">Productos</a>
                 <a href="<?=base_url('nosotros')?>" class="header-links">Nosotros</a>
             </div>
-            <div class="search-bar">
+            <form method="get" action="" class="search-bar">
                 <input type="text" class="form-control" placeholder="Buscar">
                 <i class="bi bi-search"></i>
-            </div>
+            </form>
+            
             <div class="btn-group" role="group" aria-label="Default button group">
                 <a type="button" class="btn btn-outline-primary">
                     <i class="bi bi-basket3-fill"></i>

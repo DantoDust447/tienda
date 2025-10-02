@@ -63,3 +63,12 @@ nav{
     margin-left: 10px;
     margin-right: 10px;
 }
+.card-container{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

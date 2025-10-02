@@ -3,25 +3,15 @@
 namespace App\Controllers;
 use App\Models\CategoriasModel;
 use App\Models\ProductosModel;
-class CategoriasController extends BaseController
+class ProductoController extends BaseController
 {
-    public function index()
+public function buscar()
     {
         $categoria = new CategoriasModel();
         $producto = new ProductosModel();
         $datos['productos'] = $producto->findAll();
         $datos['categorias'] = $categoria->findAll();
         return view('vista_categorias', $datos);
-        
-    }
-    public function buscar($id)
-    {
-        //echo $id;
-        
-        $producto = new ProductosModel();
-
-        $datos['datos'] = $producto->where(['producto_id' => $id])->first();
-        return view('vista_buscar_producto', $datos);
         
     }
 }

@@ -23,10 +23,10 @@
                 <a href="<?=base_url('productos')?>" class="header-links">Productos</a>
                 <a href="<?=base_url('nosotros')?>" class="header-links">Nosotros</a>
             </div>
-            <div class="search-bar">
+            <form method="get" action="<?= base_url('buscar_producto') ?>" class="search-bar">
                 <input type="text" class="form-control" placeholder="Buscar">
                 <i class="bi bi-search"></i>
-            </div>
+            </form>
             <div class="btn-group" role="group" aria-label="Default button group">
                 <button type="button" class="btn btn-outline-primary">
                     <i class="bi bi-basket3-fill"></i>
@@ -70,7 +70,7 @@
                         <?php if ($producto['categoria_id'] == $categoria['categoria_id']): ?>
                         <td><?= esc($producto['nombre'])?></td>
                         <td><?= esc($producto['descripcion'])?></td>
-                        <td><a href="<?=base_url('buscar_producto')?>" class="btn btn-outline-light">Mas información</a></td>
+                        <td><a href="<?=base_url('buscar_categoria/').$producto['producto_id']?>" class="btn btn-outline-light">Mas información</a></td>
                         <?php endif; ?>
                     </tr>
                     <?php
