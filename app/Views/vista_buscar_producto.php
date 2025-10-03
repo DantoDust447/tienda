@@ -25,7 +25,7 @@
                 <a href="<?=base_url('productos')?>" class="header-links">Productos</a>
                 <a href="<?=base_url('nosotros')?>" class="header-links">Nosotros</a>
             </div>
-            <<form method="get" action="<?= base_url('buscar_producto') ?>" class="search-bar">
+            <form method="get" action="" class="search-bar">
                 <input type="text" class="form-control" placeholder="Buscar">
                 <i class="bi bi-search"></i>
                 </form>
@@ -56,7 +56,7 @@
         <div class="container">
             <?php if(isset($datos)): ?>
             <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="<?=esc($datos['imagen_producto'])?>" class="card-img-top" alt="Algo salió mal con la imagen" frameborder="">
                 <div class="card-body">
                     <h5 class="card-title"><?= esc($datos['nombre'])?></h5>
                     <p class="card-text"><?= esc($datos['descripcion'])?></p>
