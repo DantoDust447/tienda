@@ -2,6 +2,7 @@
 <html lang="es" data-bs-theme="dark">
 <!--Esta parte del proyecto fue creada por Dante Sánchez-->
 <!--El motivo de esto es concientizar al resto del grupo a ser mas colaborativo-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +28,7 @@
                 <input type="text" class="form-control" placeholder="Buscar">
                 <i class="bi bi-search"></i>
             </form>
-            
+
             <div class="btn-group" role="group" aria-label="Default button group">
                 <a type="button" class="btn btn-outline-primary">
                     <i class="bi bi-basket3-fill"></i>
@@ -50,18 +51,21 @@
     <main>
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
             <div class="carousel-inner">
+                <?php 
+                $count = 0;
+                foreach($productos as $producto){ 
+                    if ($count >= 3) {
+                        break;
+                    }
+                    $count++;
+                ?>
                 <div class="carousel-item active">
-                    <img src="<?=base_url('images/prueba.jpg')?>" class="d-block w-100" alt="..."
-                        style="width: 200px; height: 600px; object-fit: cover; position: center;">
+                    <a href="<?=base_url('buscar_categoria/').$producto['producto_id']?>">
+                        <img src="<?=esc($producto['imagen_producto'])?>" class="d-block w-100"
+                            alt="Algo salió mal con la imagen"
+                            style="width: 200px; height: 600px; object-fit: cover; position: center;"></a>
                 </div>
-                <div class="carousel-item">
-                    <img src="<?=base_url('images/prueba0000.png')?>" class="d-block w-100" alt="..."
-                        style="width: 200px; height: 600px; object-fit: cover; position: center;">
-                </div>
-                <div class="carousel-item">
-                    <img src="<?=base_url('images/prueba0001.jpg')?>" class="d-block w-100" alt="..."
-                        style="width: 200px; height: 600px; object-fit: cover; position: center;">
-                </div>
+                <?php } ?>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
                 data-bs-slide="prev">
@@ -75,6 +79,62 @@
             </button>
         </div>
         <hr>
+        <h1 class="text-center">Productos</h1>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <?php 
+                        $categoria_count = 0;
+                        foreach ($categorias as $categoria){
+                            if ($categoria_count >= 4) {
+                                break;
+                            }
+                            $categoria_count++;
+                ?>
+                        <th scope="col">
+                            <div class="text-center">
+                                <?=esc($categoria['categoria'])?>
+                            </div>
+                        </th>
+                        <?php
+        }?>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <?php 
+                        $categoria_count = 0;
+                        foreach ($categorias as $categoria){
+                            if ($categoria_count >= 4) {
+                                break;
+                            }
+                            $categoria_count++;
+                ?>
+                        <td>
+                            <?php 
+                            $producto_count = 0;
+                            foreach ($productos as $producto): 
+                                if ($producto['categoria_id'] == $categoria['categoria_id'] && $producto_count < 4):
+                            ?>
+                            <div class="product-item">
+                                <a href="<?=base_url('buscar_categoria/').$producto['producto_id']?>"><img src="<?= esc($producto['imagen_producto'])?>" alt="Parece que algo salió mal"
+                                    style="width:100px; height:100px; margin-right:10px; border-radius:10px;"></a>
+                                <a><?= esc($producto['nombre'])?></a>
+                                <hr>
+                            </div>
+                            <?php 
+                                $producto_count++;
+                                endif; 
+                            endforeach; ?>
+                        </td>
+                        <?php
+        }?>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
 
     </main>
 
