@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\CategoriasModel;
 use App\Models\ProductosModel;
-class Home extends BaseController
+class HomeController extends BaseController
 {
     public function index()
     {

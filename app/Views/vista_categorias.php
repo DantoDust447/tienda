@@ -2,6 +2,7 @@
 <html lang="es" data-bs-theme="dark">
 <!--Esta parte del proyecto fue creada por Dante Sánchez-->
 <!--El motivo de esto es concientizar al resto del grupo a ser mas colaborativo-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,10 +28,10 @@
                 <input type="text" class="form-control" placeholder="Buscar">
                 <i class="bi bi-search"></i>
             </form>
-            <div class="btn-group" role="group" aria-label="Default button group" href="<?=base_url('carrito')?>">
-                <button type="button" class="btn btn-outline-primary">
+            <div class="btn-group" role="group" aria-label="Default button group">
+                <a type="button" class="btn btn-outline-primary" href="<?=base_url('carrito')?>">
                     <i class="bi bi-basket3-fill"></i>
-                </button>
+                </a>
                 <a type="button" class="btn btn-outline-primary" href="<?=base_url('login')?>">
                     <i class="bi bi-person-fill"></i></i>
                 </a>
@@ -54,7 +55,7 @@
                 ?>
             <table class="table table-striped table-hover">
                 <thead>
-                    <tr>    
+                    <tr>
                         <th scope="col" class="text-center">
                             <h2>
                                 <?=$categoria['categoria'];?>
@@ -70,12 +71,13 @@
                         <?php if ($producto['categoria_id'] == $categoria['categoria_id']): ?>
                         <td><?= esc($producto['nombre'])?></td>
                         <td><?= esc($producto['descripcion'])?></td>
-                        <td><a href="<?=base_url('buscar_categoria/').$producto['producto_id']?>" class="btn btn-outline-light">Mas información</a></td>
+                        <td><a href="<?=base_url('buscar_categoria/').$producto['producto_id']?>"
+                                class="btn btn-outline-light">Mas información</a></td>
                         <?php endif; ?>
                     </tr>
                     <?php
         endforeach;
-         ?>  
+         ?>
                 </tbody>
             </table>
             <?php
