@@ -6,6 +6,8 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'HomeController::index');
+/*Carrito*/
+$routes->get('carrito', 'CarritoController::index');
 
 /*Procesos de Login*/
 $routes->get('login', 'LoginController::index');
