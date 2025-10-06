@@ -53,7 +53,7 @@ $routes->post('modificar_detalle_pedido', 'DetallePedidoController::modificar');
 /*productos*/
 $routes->get('productos', 'ProductoController::index');
 $routes->post('agregar_producto', 'ProductoController::agregar');
-$routes->get('eliminar_producto', 'ProductoController::eliminar');
+$routes->get('eliminar_producto/(:num)', 'ProductoController::eliminar/$1');
 $routes->get('buscar_producto', 'ProductoController::buscar');
 $routes->post('modificar_producto', 'ProductoController::modificar');
 
