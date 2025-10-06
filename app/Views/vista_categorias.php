@@ -27,7 +27,7 @@
                 <input type="text" class="form-control" placeholder="Buscar">
                 <i class="bi bi-search"></i>
             </form>
-            <div class="btn-group" role="group" aria-label="Default button group">
+            <div class="btn-group" role="group" aria-label="Default button group" href="<?=base_url('carrito')?>">
                 <button type="button" class="btn btn-outline-primary">
                     <i class="bi bi-basket3-fill"></i>
                 </button>

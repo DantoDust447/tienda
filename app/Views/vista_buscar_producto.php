@@ -30,7 +30,7 @@
                 <i class="bi bi-search"></i>
                 </form>
                 <div class="btn-group" role="group" aria-label="Default button group">
-                    <a type="button" class="btn btn-outline-primary">
+                    <a type="button" class="btn btn-outline-primary" href="<?=base_url('carrito')?>">
                         <i class="bi bi-basket3-fill"></i>
                     </a>
                     <a type="button" class="btn btn-outline-primary" href="<?=base_url('login')?>">

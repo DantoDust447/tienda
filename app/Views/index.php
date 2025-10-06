@@ -30,7 +30,7 @@
             </form>
 
             <div class="btn-group" role="group" aria-label="Default button group">
-                <a type="button" class="btn btn-outline-primary">
+                <a type="button" class="btn btn-outline-primary" href="<?=base_url('carrito')?>">
                     <i class="bi bi-basket3-fill"></i>
                 </a>
                 <a type="button" class="btn btn-outline-primary" href="<?=base_url('login')?>">
@@ -118,8 +118,9 @@
                                 if ($producto['categoria_id'] == $categoria['categoria_id'] && $producto_count < 4):
                             ?>
                             <div class="product-item">
-                                <a href="<?=base_url('buscar_categoria/').$producto['producto_id']?>"><img src="<?= esc($producto['imagen_producto'])?>" alt="Parece que algo salió mal"
-                                    style="width:100px; height:100px; margin-right:10px; border-radius:10px;"></a>
+                                <a href="<?=base_url('buscar_categoria/').$producto['producto_id']?>"><img
+                                        src="<?= esc($producto['imagen_producto'])?>" alt="Parece que algo salió mal"
+                                        style="width:100px; height:100px; margin-right:10px; border-radius:10px;"></a>
                                 <a><?= esc($producto['nombre'])?></a>
                                 <hr>
                             </div>
@@ -131,7 +132,7 @@
                         <?php
         }?>
                     </tr>
-                </thead>
+                    </thead>
             </table>
         </div>
 
