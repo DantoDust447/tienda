@@ -48,14 +48,26 @@
         </div>
     </header>
     <main>
+        <br>
+        <h1 class="text-center">Marcas</h1>
+        <hr>
         <?php foreach ($marcas  as $marca):
                 ?>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <th class="table-active"><?= esc($marca['marca_nombre'])?></th>
+                    <th class="text-center table-active"><a class="btn btn-outline-light">Productos</a></th>
+                </thead>
+                <tbody>
                     <tr>
-                        <td><?= esc($marca['marca_nombre'])?></td>-|-
                         <td><?= esc($marca['descripcion'])?></td>
+                        <td></td>
                     </tr>
-                    <hr>
-                    <?php
+                </tbody>
+            </table>
+        </div>
+        <?php
         endforeach;
          ?>
     </main>
